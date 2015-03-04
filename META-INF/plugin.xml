@@ -1,0 +1,53 @@
+<idea-plugin version="2">
+	<id>com.steve.plugins.projectnav</id>
+	<name>Project Navigator</name>
+	<version>1.0</version>
+	<vendor>Steve Murphy</vendor>
+
+	<description><![CDATA[
+      A handy new key-based Project Navigator:<br>
+      <br>
+      Navigate Up: Ctrl-Alt PAGE UP<br>
+      Navigate Down: Ctrl-Alt PAGE DOWN<br>
+      Navigate Select (Open / Expand / Collapse Node): Ctrl-Alt END<br>
+      <br>
+      (Rebind the key shortcuts to suit your preferences.)
+
+      ]]></description>
+
+	<change-notes><![CDATA[
+      1.0 - Initial version.<br>
+      ]]>
+	</change-notes>
+
+	<!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+	<idea-version since-build="133"/>
+
+	<!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+		   on how to target different products -->
+	<depends>com.intellij.modules.lang</depends>
+
+	<application-components>
+	</application-components>
+
+	<project-components>
+	</project-components>
+
+	<actions>
+		<action id="projectnav-plugin.navigate.select" class="com.steve.plugins.projectnav.NavigateSelect" text="Select" description="Select (Open/Expand/Collapse Node) in the Project Pane">
+			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt END"/>
+		</action>
+		<action id="projectnav-plugin.navigate.down" class="com.steve.plugins.projectnav.NavigateDown" text="Down" description="Navigate Down in the Project Pane">
+			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt PAGE_DOWN"/>
+		</action>
+		<action id="projectnav-plugin.navigate.up" class="com.steve.plugins.projectnav.NavigateUp" text="Up" description="Navigate Up in the Project Pane">
+			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt PAGE_UP"/>
+			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
+		</action>
+	</actions>
+
+	<extensions defaultExtensionNs="com.intellij">
+	</extensions>
+</idea-plugin>
