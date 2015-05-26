@@ -5,16 +5,17 @@
 	<vendor>Steve Murphy</vendor>
 
 	<description><![CDATA[
-      A handy new key-based Project Navigator:<br>
+      A handy new key-based Project Navigator.<br>
+      <br>
+      Use the following shortcuts to navigate up and down quickly in the "Project" pane:<br>
       <br>
       Navigate Up: Ctrl-Alt PAGE UP<br>
       Navigate Down: Ctrl-Alt PAGE DOWN<br>
       Navigate Select (Open / Expand / Collapse Node): Ctrl-Alt END<br>
       <br>
-      (Rebind the key shortcuts to suit your preferences.)
+      (Rebind the key shortcuts to suit your preferences.)<br>
       <br>
-      <i>If you find this plugin useful, please leave a Star-rating and comment :)</i>
-      <br>
+      <i>If you find this plugin useful, please leave a Star-rating and comment :)</i><br>
 
       ]]></description>
 
