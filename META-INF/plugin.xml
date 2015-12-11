@@ -5,17 +5,15 @@
 	<vendor>Steve Murphy</vendor>
 
 	<description><![CDATA[
-      A handy new key-based Project Navigator.<br>
+      Navigate the "Project" Pane using the keyboard.<br>
       <br>
-      Use the following shortcuts to navigate up and down quickly in the "Project" pane:<br>
-      <br>
+      Navigate Home: Ctrl-Alt HOME<br>
       Navigate Up: Ctrl-Alt PAGE UP<br>
       Navigate Down: Ctrl-Alt PAGE DOWN<br>
       Navigate Select (Open / Expand / Collapse Node): Ctrl-Alt END<br>
       <br>
-      (Rebind the key shortcuts to suit your preferences.)<br>
+      Key bindings can changed here: Settings -> Keymap -> search "project navigator"<br>
       <br>
-      <i>If you find this plugin useful, please leave a Star-rating and comment :)</i><br>
 
       ]]></description>
 
@@ -35,17 +33,22 @@
 	</project-components>
 
 	<actions>
-		<action id="projectnav-plugin.navigate.select" class="com.steve.plugins.projectnav.NavigateSelect" text="Select" description="Select (Open/Expand/Collapse Node) in the Project Pane">
+		<!-- add to menu in reverse order due to relative positioning -->
+		<action id="projectnav-plugin.navigate.select" class="com.steve.plugins.projectnav.NavigateSelect" text="Select" description="Select (Open/Expand/Collapse) node at Navigated point in the Project Pane">
 			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
-			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt END"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="shift alt END"/>
 		</action>
 		<action id="projectnav-plugin.navigate.down" class="com.steve.plugins.projectnav.NavigateDown" text="Down" description="Navigate Down in the Project Pane">
 			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
-			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt PAGE_DOWN"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="shift alt PAGE_DOWN"/>
 		</action>
 		<action id="projectnav-plugin.navigate.up" class="com.steve.plugins.projectnav.NavigateUp" text="Up" description="Navigate Up in the Project Pane">
-			<keyboard-shortcut keymap="$default" first-keystroke="ctrl alt PAGE_UP"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="shift alt PAGE_UP"/>
 			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
+		</action>
+		<action id="projectnav-plugin.navigate.home" class="com.steve.plugins.projectnav.NavigateHome" text="Home" description="Navigate Home to the root node of the Project Pane">
+			<add-to-group group-id="GoToMenu" anchor="after" relative-to-action="Forward"/>
+			<keyboard-shortcut keymap="$default" first-keystroke="shift alt HOME"/>
 		</action>
 	</actions>
 
