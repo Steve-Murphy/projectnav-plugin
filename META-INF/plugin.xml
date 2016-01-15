@@ -5,12 +5,12 @@
 	<vendor>Steve Murphy</vendor>
 
 	<description><![CDATA[
-      Navigate the "Project" Pane using the keyboard.<br>
+      Navigate the "Project" pane using the keyboard.<br>
       <br>
-      Navigate Home: Ctrl-Alt HOME<br>
-      Navigate Up: Ctrl-Alt PAGE UP<br>
-      Navigate Down: Ctrl-Alt PAGE DOWN<br>
-      Navigate Select (Open / Expand / Collapse Node): Ctrl-Alt END<br>
+      Navigate Home: Shift-Alt HOME<br>
+      Navigate Up: Shift-Alt PAGE UP<br>
+      Navigate Down: Shift-Alt PAGE DOWN<br>
+      Navigate Select (Open / Expand / Collapse Node): Shift-Alt END<br>
       <br>
       Key bindings can changed here: Settings -> Keymap -> search "project navigator"<br>
       <br>
